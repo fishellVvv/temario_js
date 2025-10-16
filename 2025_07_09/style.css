@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-origin: padding-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #363636;
+  color: whitesmoke;
+  transition: .3s;
+
+  min-height: 200vh;
+}
+
+body.light {
+  background-color: whitesmoke;
+  color: #363636;
+}
+
+body #btn {
+  padding: .5rem 1.5rem;
+  margin: 2rem;
+  border-radius: .5rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+body p {
+  margin: 2rem;
+}
