@@ -249,8 +249,10 @@ for (const vg of videogames) {
   const platformsDiv = li.querySelector(".platforms");  
   for (const platform of vg.platforms) {
     const h3 = document.createElement("h3");
-    h3.className = "platform";
     h3.textContent = platform;
+
+    const safe = platform.replace(/[^a-z0-9]+/gi, '-');
+    h3.classList.add("platform", safe);
 
     platformsDiv.appendChild(h3);
   };
@@ -258,8 +260,10 @@ for (const vg of videogames) {
   const genresDiv = li.querySelector(".genres");  
   for (const genre of vg.genres) {
     const p = document.createElement("p");
-    p.className = "genre";
     p.textContent = genre;
+
+    const safe = genre.replace(/[^a-z0-9]+/gi, '-');
+    p.classList.add("genre", safe);
 
     genresDiv.appendChild(p);
   };

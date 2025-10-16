@@ -5,6 +5,23 @@
   font-family: monospace;
 }
 
+:root {
+  .PC {background-color: #292929;}
+  .PC-VR- {background-color: #292929;}
+
+  .PS3 {background-color: #3f3f98;}
+  .PS4 {background-color: #28446f;}
+  .PS5 {background-color: #1c344f;}
+
+  .Xbox-360 {background-color: #426442;}
+  .Xbox-One {background-color: #3f613f;}
+  .Xbox-Series {background-color: #2a442a;}
+  
+  .Wii {background-color: #5f8597;}
+  .Wii-U {background-color: #2a4856;}
+  .Switch {background-color: #67282e;}
+}
+
 h1, h2, h3, h4 {
   text-transform: uppercase;
 }
@@ -19,7 +36,8 @@ body {
 #vg-container {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, 216px);
+  justify-content: center;
   gap: 2rem;
   padding: 1rem;
 }
@@ -27,9 +45,10 @@ body {
 #vg-container li {
   display: flex;
   flex-direction: column;
+  width: 216px;
 
   background-color: #434343;
-  border: 1px solid #808080;
+  border: 2px solid #808080;
   border-radius: .5rem;
   overflow: hidden;
 }
@@ -39,11 +58,12 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 200px;
-  width: 200px;
+  width: calc(100% - 1rem);
+  aspect-ratio: 1;
   margin: .5rem;
 
   background-color: #212121;
+  border: 2px solid #808080;
   border-radius: .5rem;
   overflow: hidden;
 }
@@ -79,24 +99,33 @@ body {
   gap: .5rem;
 }
 
+#vg-container .info h2 {
+  margin-bottom: 1.5rem;
+}
+
 #vg-container .platforms {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: .25rem;
-  color: #b1b1b1;
+  color: #ececec;
 }
 
 #vg-container .platform {
-  background-color: #212121;
   border-radius: .5rem;
   padding: .125rem .5rem;
+}
+
+#vg-container .platform:hover {
+  cursor: pointer;
+  filter: brightness(1.25);
 }
 
 #vg-container .genres {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: .5rem 0 1rem;
   gap: .5rem;
 
   font-size: .8125rem;
