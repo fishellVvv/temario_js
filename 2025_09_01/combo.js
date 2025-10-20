@@ -1,0 +1,123 @@
+const marvelHeroesDetailed = [
+  {
+    name: "Iron Man",
+    age: 48,
+    city: "Malibu, California",
+    realName: "Tony Stark",
+    powerLevel: 85,
+    species: "Human",
+    team: "Avengers",
+  },
+  {
+    name: "Captain America",
+    age: 105,
+    city: "Brooklyn, New York",
+    realName: "Steve Rogers",
+    powerLevel: 78,
+    species: "Enhanced Human",
+    team: "Avengers",
+  },
+  {
+    name: "Thor",
+    age: 1500,
+    city: "New Asgard, Norway",
+    realName: "Thor Odinson",
+    powerLevel: 95,
+    species: "Asgardian",
+    team: "Avengers",
+  },
+  {
+    name: "Wolverine",
+    age: 150,
+    city: "Westchester, New York",
+    realName: "James 'Logan' Howlett",
+    powerLevel: 88,
+    species: "Mutant",
+    team: "X-Men",
+  },
+  {
+    name: "Storm",
+    age: 35,
+    city: "New York, New York",
+    realName: "Ororo Munroe",
+    powerLevel: 90,
+    species: "Mutant",
+    team: "X-Men",
+  },
+  {
+    name: "Cyclops",
+    age: 35,
+    city: "Westchester County, New York",
+    realName: "Scott Summers",
+    powerLevel: 84,
+    species: "Mutant",
+    team: "X-Men",
+  },
+  {
+    name: "Star-Lord",
+    age: 38,
+    city: "Knowhere",
+    realName: "Peter Quill",
+    powerLevel: 70,
+    species: "Human/Celestial Hybrid",
+    team: "Guardians of the Galaxy",
+  },
+  {
+    name: "Gamora",
+    age: 29,
+    city: "Knowhere",
+    realName: "Gamora",
+    powerLevel: 82,
+    species: "Zen-Whoberis",
+    team: "Guardians of the Galaxy",
+  },
+  {
+    name: "Rocket Raccoon",
+    age: 35,
+    city: "Knowhere",
+    realName: "Rocket",
+    powerLevel: 68,
+    species: "Genetically Engineered Raccoon",
+    team: "Guardians of the Galaxy",
+  },
+  {
+    name: "Daredevil",
+    age: 33,
+    city: "Hell's Kitchen, New York",
+    realName: "Matt Murdock",
+    powerLevel: 72,
+    species: "Human",
+    team: "Defenders",
+  },
+  {
+    name: "Jessica Jones",
+    age: 35,
+    city: "New York, New York",
+    realName: "Jessica Jones",
+    powerLevel: 76,
+    species: "Enhanced Human",
+    team: "Defenders",
+  },
+  {
+    name: "Luke Cage",
+    age: 40,
+    city: "Harlem, New York",
+    realName: "Carl Lucas",
+    powerLevel: 80,
+    species: "Enhanced Human",
+    team: "Defenders",
+  },
+];
+
+// suma de nivel de poder de los humanos menores de 40 años
+const youngHumansPower = marvelHeroesDetailed
+  .map((sh) => ({
+    name: sh.name,
+    age: sh.age,
+    powerLevel: sh.powerLevel,
+    species: sh.species,
+  }))
+  .filter((sh) => sh.species.includes("Human") && sh.age < 40)
+  .reduce((acc, sh) => acc + sh.powerLevel, 0);
+
+console.log(youngHumansPower);
