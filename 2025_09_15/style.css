@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  padding: 1rem;
+
+  background-color: #eee;
+  color: #222;
+}
+
+body.dark {
+  background-color: #222;
+  color: #eee;
+}
+
+#themeBtn {
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  filter: saturate(0%);
+  transition: ease-in-out 0.3s;
+}
+
+#themeBtn:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem #0007);
+}
